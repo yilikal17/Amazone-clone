@@ -1,0 +1,77 @@
+[debug] [2023-05-23T01:26:43.786Z] ----------------------------------------------------------------------
+[debug] [2023-05-23T01:26:43.788Z] Command:       C:\Users\yilik\Desktop\project\Amazon Clone\amazon-clone\functions\node_modules\node\bin\node.exe C:\Users\yilik\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2023-05-23T01:26:43.789Z] CLI Version:   11.28.0
+[debug] [2023-05-23T01:26:43.789Z] Platform:      win32
+[debug] [2023-05-23T01:26:43.789Z] Node Version:  v19.8.1
+[debug] [2023-05-23T01:26:43.789Z] Time:          Tue May 23 2023 04:26:43 GMT+0300 (Israel Daylight Time)
+[debug] [2023-05-23T01:26:43.789Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-23T01:26:43.794Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-05-23T01:26:43.906Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-23T01:26:43.906Z] > authorizing via signed-in user (yilikalbelayneh17@gmail.com)
+[debug] [2023-05-23T01:26:43.906Z] [iam] checking project clone---front-end-b3922 for permissions ["firebase.projects.get"]
+[debug] [2023-05-23T01:26:43.907Z] > refreshing access token with scopes: []
+[debug] [2023-05-23T01:26:43.908Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-05-23T01:26:43.908Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-23T01:26:44.157Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-05-23T01:26:44.158Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-23T01:26:44.168Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone---front-end-b3922:testIamPermissions [none]
+[debug] [2023-05-23T01:26:44.169Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone---front-end-b3922:testIamPermissions x-goog-quota-user=projects/clone---front-end-b3922
+[debug] [2023-05-23T01:26:44.169Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone---front-end-b3922:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-05-23T01:26:44.292Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-05-23T01:26:44.292Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-05-23T01:26:45.239Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone---front-end-b3922:testIamPermissions 200
+[debug] [2023-05-23T01:26:45.240Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone---front-end-b3922:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-05-23T01:26:45.244Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-23T01:26:45.247Z] defaultcredentials: writing to file C:\Users\yilik\AppData\Roaming\firebase\yilikalbelayneh17_gmail_com_application_default_credentials.json
+[debug] [2023-05-23T01:26:45.248Z] DEBUG: Setting GAC to C:\Users\yilik\AppData\Roaming\firebase\yilikalbelayneh17_gmail_com_application_default_credentials.json
+[debug] [2023-05-23T01:26:45.248Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone---front-end-b3922/adminSdkConfig [none]
+[debug] [2023-05-23T01:26:45.744Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone---front-end-b3922/adminSdkConfig 200
+[debug] [2023-05-23T01:26:45.744Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone---front-end-b3922/adminSdkConfig {"projectId":"clone---front-end-b3922","storageBucket":"clone---front-end-b3922.appspot.com"}
+[debug] [2023-05-23T01:26:45.760Z] [functions] Watching "C:\Users\yilik\Desktop\project\Amazon Clone\amazon-clone\functions" for Cloud Functions...
+[debug] [2023-05-23T01:26:45.766Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-05-23T01:26:49.036Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0",
+    "node": "^19.8.1",
+    "stripe": "^12.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-05-23T01:26:49.037Z] Building nodejs source
+[debug] [2023-05-23T01:26:49.037Z] Failed to find version of module node: reached end of search path C:\Users\yilik\Desktop\project\Amazon Clone\amazon-clone\functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "19". Using node@19 from host. 
+[debug] [2023-05-23T01:26:49.040Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-23T01:26:49.048Z] Found firebase-functions binary at 'C:\Users\yilik\Desktop\project\Amazon Clone\amazon-clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-23T01:26:52.621Z] Serving at port 8455
+
+[debug] [2023-05-23T01:26:53.215Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-23T01:26:53.223Z] shutdown requested via /__/quitquitquit
+
+[debug] [2023-05-23T01:26:53.239Z] [functions] Loaded functions definitions from source: api.
+[debug] [2023-05-23T01:26:53.240Z] [functions[us-central1-api]] http function initialized (http://127.0.0.1:5000/clone---front-end-b3922/us-central1/api).
+[info] i  functions: Loaded functions: api 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
